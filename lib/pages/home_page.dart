@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 
 // ignore: unused_import
-import 'main.dart';
+import '../main.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({ Key? key }) : super(key: key);
