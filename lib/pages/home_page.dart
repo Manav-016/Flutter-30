@@ -3,19 +3,20 @@
 // import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:practice_1/widgets/drawer.dart';
 
 // ignore: unused_import
 import '../main.dart';
 
 class Homepage extends StatelessWidget {
-  const Homepage({ Key? key }) : super(key: key);
+  const Homepage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Flutter Demo')),
-      body: Center(child:
-      Text('Flutter Demo Home Page')),
+      drawer: MyDrawer(),
+      body: Center(child: Text('Flutter Demo Home Page')),
     );
   }
 }

@@ -14,10 +14,9 @@ class Loginpage extends StatefulWidget {
 class _LoginpageState extends State<Loginpage> {
   String name = "";
 
-  @override
   final _formkey = GlobalKey<FormState>();
   bool _a = false;
-
+  @override
   moveToHome(BuildContext context) async {
     {
       if (_formkey.currentState!.validate()) {
@@ -47,7 +46,7 @@ class _LoginpageState extends State<Loginpage> {
               height: 20,
             ),
             Text(
-              "Welcome To Our $name",
+              "Welcome To Our App",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
             ),
             SizedBox(
@@ -93,22 +92,30 @@ class _LoginpageState extends State<Loginpage> {
                         // splashColor: Colors.black,
                         onTap: () => moveToHome(context),
                         child: AnimatedContainer(
-                          duration: Duration(seconds: 1),
+                          duration: Duration.zero,
                           alignment: Alignment.center,
-                          width: _a ? 50 : 150,
+                          // width: _a ? 50 : 150,
+                          width: 150,
                           height: 50,
-                          child: _a
-                              ? Icon(
-                                  Icons.done,
-                                  color: Colors.white,
-                                )
-                              : Text(
-                                  "LOGIN",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold),
-                                ),
+                          // child: _a
+                          //     ? Icon(
+                          //         Icons.done,
+                          //         color: Colors.white,
+                          //       )
+                          //     : Text(
+                          //         "LOGIN",
+                          //         style: TextStyle(
+                          //             color: Colors.white,
+                          //             fontSize: 15,
+                          //             fontWeight: FontWeight.bold),
+                          //       ),
+                          child: Text(
+                            "LOGIN",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
+                          ),
                         ),
                       ),
                     ),
